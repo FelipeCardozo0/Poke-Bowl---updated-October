@@ -2,7 +2,7 @@
 
 **Version**: 1.0.0  
 **Platform**: NVIDIA Jetson Orin Nano  
-**Status**: Production Ready ✅
+**Status**: Production Ready [OK]
 
 ---
 
@@ -12,7 +12,7 @@ This project includes comprehensive documentation for all aspects of deployment,
 
 ---
 
-## 🚀 Getting Started (Start Here!)
+##  Getting Started (Start Here!)
 
 ### 1. **QUICKSTART.md** - Fast Setup Guide
 **Read this first if you want to get running quickly**
@@ -25,11 +25,11 @@ This project includes comprehensive documentation for all aspects of deployment,
 **Time to read**: 5 minutes  
 **Time to deploy**: 10-30 minutes
 
-[➡️ Open QUICKSTART.md](./QUICKSTART.md)
+[➡ Open QUICKSTART.md](./QUICKSTART.md)
 
 ---
 
-## 📖 Core Documentation
+##  Core Documentation
 
 ### 2. **README.md** - Complete User Manual
 **Comprehensive guide for all users**
@@ -43,11 +43,11 @@ This project includes comprehensive documentation for all aspects of deployment,
 
 **Time to read**: 15-20 minutes
 
-[➡️ Open README.md](./README.md)
+[➡ Open README.md](./README.md)
 
 ---
 
-## 🏗️ Technical Documentation
+##  Technical Documentation
 
 ### 3. **ARCHITECTURE.md** - System Architecture
 **For developers and technical staff**
@@ -61,7 +61,7 @@ This project includes comprehensive documentation for all aspects of deployment,
 
 **Audience**: Developers, DevOps, Technical Architects
 
-[➡️ Open ARCHITECTURE.md](./ARCHITECTURE.md)
+[➡ Open ARCHITECTURE.md](./ARCHITECTURE.md)
 
 ---
 
@@ -77,11 +77,11 @@ This project includes comprehensive documentation for all aspects of deployment,
 
 **Audience**: Everyone (visual learners)
 
-[➡️ Open SYSTEM_DIAGRAM.md](./SYSTEM_DIAGRAM.md)
+[➡ Open SYSTEM_DIAGRAM.md](./SYSTEM_DIAGRAM.md)
 
 ---
 
-## 🎯 Operational Documentation
+##  Operational Documentation
 
 ### 5. **DEPLOYMENT_CHECKLIST.md** - Production Deployment
 **Step-by-step deployment verification**
@@ -95,7 +95,7 @@ This project includes comprehensive documentation for all aspects of deployment,
 
 **Use case**: Deploying to production environment
 
-[➡️ Open DEPLOYMENT_CHECKLIST.md](./DEPLOYMENT_CHECKLIST.md)
+[➡ Open DEPLOYMENT_CHECKLIST.md](./DEPLOYMENT_CHECKLIST.md)
 
 ---
 
@@ -111,11 +111,11 @@ This project includes comprehensive documentation for all aspects of deployment,
 
 **Audience**: Project managers, stakeholders
 
-[➡️ Open PROJECT_SUMMARY.md](./PROJECT_SUMMARY.md)
+[➡ Open PROJECT_SUMMARY.md](./PROJECT_SUMMARY.md)
 
 ---
 
-## 🔧 Configuration Files
+##  Configuration Files
 
 ### **config/config.yaml** - System Configuration
 All runtime settings in one place:
@@ -124,11 +124,11 @@ All runtime settings in one place:
 - Inventory smoothing
 - Server settings
 
-[➡️ View config.yaml](./config/config.yaml)
+[➡ View config.yaml](./config/config.yaml)
 
 ---
 
-## 🛠️ Deployment Scripts
+##  Deployment Scripts
 
 Located in `deployment/` directory:
 
@@ -166,7 +166,7 @@ All code includes inline documentation and comments.
 
 ---
 
-## 📊 Quick Reference
+##  Quick Reference
 
 ### Common Commands
 
@@ -213,7 +213,7 @@ curl http://localhost:8080/health
 
 ---
 
-## 🎓 Learning Path
+##  Learning Path
 
 ### For Operators
 1. Read **QUICKSTART.md**
@@ -277,7 +277,7 @@ curl http://localhost:8080/health
 
 ---
 
-## 📱 Support
+##  Support
 
 ### Self-Service Resources
 
@@ -315,30 +315,30 @@ Documentation/
 
 | Document | Status | Last Updated |
 |----------|--------|--------------|
-| INDEX.md | ✅ Current | January 2026 |
-| QUICKSTART.md | ✅ Current | January 2026 |
-| README.md | ✅ Current | January 2026 |
-| ARCHITECTURE.md | ✅ Current | January 2026 |
-| SYSTEM_DIAGRAM.md | ✅ Current | January 2026 |
-| DEPLOYMENT_CHECKLIST.md | ✅ Current | January 2026 |
-| PROJECT_SUMMARY.md | ✅ Current | January 2026 |
+| INDEX.md | [OK] Current | January 2026 |
+| QUICKSTART.md | [OK] Current | January 2026 |
+| README.md | [OK] Current | January 2026 |
+| ARCHITECTURE.md | [OK] Current | January 2026 |
+| SYSTEM_DIAGRAM.md | [OK] Current | January 2026 |
+| DEPLOYMENT_CHECKLIST.md | [OK] Current | January 2026 |
+| PROJECT_SUMMARY.md | [OK] Current | January 2026 |
 
 ---
 
-## 🎯 Key Features Summary
+##  Key Features Summary
 
-✅ **Real-time Detection** - YOLO-based object detection  
-✅ **Stable Counting** - Temporal smoothing for accuracy  
-✅ **Web Interface** - Live video + inventory display  
-✅ **Auto-Start** - Boots automatically with Jetson  
-✅ **GPU Accelerated** - FP16 precision on CUDA  
-✅ **Production Ready** - Error handling and logging  
-✅ **Well Documented** - Comprehensive guides  
-✅ **Easy Deploy** - Automated setup scripts  
+[OK] **Real-time Detection** - YOLO-based object detection  
+[OK] **Stable Counting** - Temporal smoothing for accuracy  
+[OK] **Web Interface** - Live video + inventory display  
+[OK] **Auto-Start** - Boots automatically with Jetson  
+[OK] **GPU Accelerated** - FP16 precision on CUDA  
+[OK] **Production Ready** - Error handling and logging  
+[OK] **Well Documented** - Comprehensive guides  
+[OK] **Easy Deploy** - Automated setup scripts  
 
 ---
 
-## 🚀 Quick Links
+##  Quick Links
 
 - **Main Application**: `backend/main.py`
 - **Configuration**: `config/config.yaml`
@@ -348,7 +348,7 @@ Documentation/
 
 ---
 
-## 📞 Getting Help
+##  Getting Help
 
 1. **Check documentation** (this index)
 2. **Review logs** for errors
@@ -358,7 +358,7 @@ Documentation/
 
 ---
 
-## ✅ System Requirements
+## [OK] System Requirements
 
 - **Hardware**: NVIDIA Jetson Orin Nano
 - **OS**: JetPack 6.x (Ubuntu 22.04)
@@ -369,16 +369,16 @@ Documentation/
 
 ---
 
-## 🎉 You're Ready!
+##  You're Ready!
 
 All documentation is complete and ready for use. Start with [QUICKSTART.md](./QUICKSTART.md) for fastest deployment.
 
-**Happy Deploying!** 🚀
+**Happy Deploying!** 
 
 ---
 
 **Documentation Version**: 1.0.0  
 **System Version**: 1.0.0  
 **Last Updated**: January 2026  
-**Status**: ✅ Complete and Current
+**Status**: [OK] Complete and Current
 

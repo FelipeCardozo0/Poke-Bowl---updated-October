@@ -70,7 +70,7 @@ CPUQuota=400%
 WantedBy=multi-user.target
 EOF
 
-echo -e "${GREEN}✓ Service file created at $SERVICE_FILE${NC}"
+echo -e "${GREEN}[OK] Service file created at $SERVICE_FILE${NC}"
 
 # Reload systemd
 echo -e "${YELLOW}Reloading systemd daemon...${NC}"

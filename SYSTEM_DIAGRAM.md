@@ -329,10 +329,10 @@ Poke-Bowl---updated-January/
 ├── 📁 deployment/                  # Deployment scripts
 │   ├── 📄 pokebowl-inventory.service       # Systemd service
 │   ├── 📄 chromium-kiosk.service           # Browser service
-│   ├── 🔧 install_service.sh               # Service installer
-│   ├── 🔧 setup_autostart.sh               # Auto-start setup
-│   ├── 🔧 setup_jetson.sh                  # Full system setup
-│   └── 🔧 quick_test.sh                    # System test
+│   ├──  install_service.sh               # Service installer
+│   ├──  setup_autostart.sh               # Auto-start setup
+│   ├──  setup_jetson.sh                  # Full system setup
+│   └──  quick_test.sh                    # System test
 │
 ├── 📁 dataset/                     # Training data (preserved)
 │   └── pokebowl_dataset/

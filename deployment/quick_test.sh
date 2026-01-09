@@ -23,20 +23,20 @@ cd "$PROJECT_DIR"
 # Test 1: Check Python version
 echo -e "${YELLOW}[1/7] Checking Python version...${NC}"
 python3 --version
-echo -e "${GREEN}✓ Python OK${NC}"
+echo -e "${GREEN}[OK] Python${NC}"
 echo
 
 # Test 2: Check dependencies
 echo -e "${YELLOW}[2/7] Checking Python dependencies...${NC}"
 python3 -c "import yaml; import cv2; import numpy; import aiohttp; print('All imports successful')"
-echo -e "${GREEN}✓ Dependencies OK${NC}"
+echo -e "${GREEN}[OK] Dependencies${NC}"
 echo
 
 # Test 3: Check YOLO model
 echo -e "${YELLOW}[3/7] Checking YOLO model...${NC}"
 if [ -f "best.pt" ]; then
     ls -lh best.pt
-    echo -e "${GREEN}✓ Model found${NC}"
+    echo -e "${GREEN}[OK] Model found${NC}"
 else
     echo -e "${RED}✗ Model not found: best.pt${NC}"
     exit 1
@@ -47,7 +47,7 @@ echo
 echo -e "${YELLOW}[4/7] Checking camera devices...${NC}"
 if command -v v4l2-ctl &> /dev/null; then
     v4l2-ctl --list-devices
-    echo -e "${GREEN}✓ Camera devices listed${NC}"
+    echo -e "${GREEN}[OK] Camera devices listed${NC}"
 else
     echo -e "${YELLOW}! v4l2-ctl not installed (optional)${NC}"
 fi
@@ -66,7 +66,7 @@ try:
 except ImportError:
     print("PyTorch not installed")
 EOF
-echo -e "${GREEN}✓ CUDA check complete${NC}"
+echo -e "${GREEN}[OK] CUDA check complete${NC}"
 echo
 
 # Test 6: Test imports
@@ -78,20 +78,20 @@ try:
     from detector import YOLODetector
     from inventory import InventoryTracker
     from server import VideoStreamServer
-    print("✓ All backend modules import successfully")
+    print("[OK] All backend modules import successfully")
 except Exception as e:
     print(f"✗ Import error: {e}")
     exit(1)
 EOF
 cd ..
-echo -e "${GREEN}✓ Backend modules OK${NC}"
+echo -e "${GREEN}[OK] Backend modules${NC}"
 echo
 
 # Test 7: Validate config
 echo -e "${YELLOW}[7/7] Validating configuration...${NC}"
 if [ -f "config/config.yaml" ]; then
     python3 -c "import yaml; yaml.safe_load(open('config/config.yaml'))"
-    echo -e "${GREEN}✓ Configuration valid${NC}"
+    echo -e "${GREEN}[OK] Configuration valid${NC}"
 else
     echo -e "${RED}✗ Configuration not found${NC}"
     exit 1

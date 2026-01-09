@@ -458,5 +458,5 @@ _____________________________________________________________
 
 **Deployment Status**: ⬜ Complete ⬜ In Progress ⬜ Issues Found
 
-If all checkboxes are marked, the system is ready for production use! 🚀
+If all checkboxes are marked, the system is ready for production use! 
 

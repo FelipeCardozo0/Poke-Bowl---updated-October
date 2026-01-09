@@ -376,6 +376,8 @@ class StreamManager:
         Main streaming loop
         Captures frames, runs inference, updates inventory, and broadcasts
         """
+        import concurrent.futures
+        
         logger.info("Starting stream loop...")
         self.is_running = True
         
@@ -383,24 +385,34 @@ class StreamManager:
         last_stats_time = time.time()
         stats_interval = 1.0  # Update stats every second
         
+        # Use thread pool for blocking operations
+        executor = concurrent.futures.ThreadPoolExecutor(max_workers=2)
+        loop = asyncio.get_event_loop()
+        
         while self.is_running:
             loop_start = time.time()
             
-            # Capture frame
-            success, frame = self.camera.read()
-            
-            if not success or frame is None:
-                logger.warning("Failed to capture frame, attempting reconnection...")
-                if not self.camera.reconnect():
-                    await asyncio.sleep(1.0)
-                    continue
-                success, frame = self.camera.read()
-                if not success:
-                    await asyncio.sleep(1.0)
-                    continue
-            
-            # Run detection
-            detections = self.detector.detect(frame)
+            try:
+                # Capture frame in thread to avoid blocking
+                success, frame = await loop.run_in_executor(executor, self.camera.read)
+                
+                if not success or frame is None:
+                    logger.warning("Failed to capture frame, attempting reconnection...")
+                    reconnect_success = await loop.run_in_executor(executor, self.camera.reconnect)
+                    if not reconnect_success:
+                        await asyncio.sleep(1.0)
+                        continue
+                    success, frame = await loop.run_in_executor(executor, self.camera.read)
+                    if not success:
+                        await asyncio.sleep(1.0)
+                        continue
+                
+                # Run detection in thread to avoid blocking
+                detections = await loop.run_in_executor(executor, self.detector.detect, frame)
+            except Exception as e:
+                logger.error(f"Error in stream loop: {e}")
+                await asyncio.sleep(0.1)
+                continue
             
             # Update inventory
             self.inventory_tracker.update(detections)
@@ -434,6 +446,8 @@ class StreamManager:
             if sleep_time > 0:
                 await asyncio.sleep(sleep_time)
         
+        # Cleanup executor
+        executor.shutdown(wait=False)
         logger.info("Stream loop stopped")
     
     def start(self):

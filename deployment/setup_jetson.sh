@@ -38,7 +38,7 @@ echo
 echo -e "${BLUE}[1/8] Updating system packages...${NC}"
 sudo apt-get update
 sudo apt-get upgrade -y
-echo -e "${GREEN}✓ System updated${NC}"
+echo -e "${GREEN}[OK] System updated${NC}"
 echo
 
 # Install system dependencies
@@ -59,7 +59,7 @@ sudo apt-get install -y \
     curl \
     wget
 
-echo -e "${GREEN}✓ System dependencies installed${NC}"
+echo -e "${GREEN}[OK] System dependencies installed${NC}"
 echo
 
 # Install PyTorch
@@ -77,7 +77,7 @@ else
         wget "$TORCH_URL"
     fi
     pip3 install "$TORCH_WHEEL"
-    echo -e "${GREEN}✓ PyTorch installed${NC}"
+    echo -e "${GREEN}[OK] PyTorch installed${NC}"
 fi
 echo
 
@@ -93,7 +93,7 @@ else
     fi
     cd torchvision
     python3 setup.py install --user
-    echo -e "${GREEN}✓ Torchvision installed${NC}"
+    echo -e "${GREEN}[OK] Torchvision installed${NC}"
 fi
 echo
 
@@ -101,7 +101,7 @@ echo
 echo -e "${BLUE}[5/8] Installing Python dependencies...${NC}"
 cd "$PROJECT_DIR"
 pip3 install -r requirements.txt
-echo -e "${GREEN}✓ Python dependencies installed${NC}"
+echo -e "${GREEN}[OK] Python dependencies installed${NC}"
 echo
 
 # Set Jetson to max performance
@@ -109,7 +109,7 @@ echo -e "${BLUE}[6/8] Configuring Jetson performance...${NC}"
 if command -v nvpmodel &> /dev/null; then
     sudo nvpmodel -m 0
     sudo jetson_clocks
-    echo -e "${GREEN}✓ Performance mode set to maximum${NC}"
+    echo -e "${GREEN}[OK] Performance mode set to maximum${NC}"
 else
     echo -e "${YELLOW}! nvpmodel not found (skip on non-Jetson)${NC}"
 fi
@@ -120,7 +120,7 @@ echo -e "${BLUE}[7/8] Testing camera...${NC}"
 if ls /dev/video* 1> /dev/null 2>&1; then
     echo "Available cameras:"
     v4l2-ctl --list-devices
-    echo -e "${GREEN}✓ Camera(s) detected${NC}"
+    echo -e "${GREEN}[OK] Camera(s) detected${NC}"
 else
     echo -e "${YELLOW}! No cameras detected - please connect USB camera${NC}"
 fi

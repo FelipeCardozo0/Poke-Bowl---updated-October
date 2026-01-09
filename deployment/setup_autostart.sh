@@ -60,7 +60,7 @@ CPUQuota=400%
 WantedBy=multi-user.target
 EOF
 
-echo -e "${GREEN}✓ Backend service created${NC}"
+echo -e "${GREEN}[OK] Backend service created${NC}"
 
 # Install Chromium kiosk service
 echo -e "${YELLOW}[2/3] Installing Chromium kiosk service...${NC}"
@@ -99,7 +99,7 @@ RestartSec=10
 WantedBy=graphical.target
 EOF
 
-echo -e "${GREEN}✓ Chromium kiosk service created${NC}"
+echo -e "${GREEN}[OK] Chromium kiosk service created${NC}"
 
 # Enable services
 echo -e "${YELLOW}[3/3] Enabling services...${NC}"
@@ -108,7 +108,7 @@ systemctl daemon-reload
 systemctl enable pokebowl-inventory.service
 systemctl enable chromium-kiosk.service
 
-echo -e "${GREEN}✓ Services enabled${NC}"
+echo -e "${GREEN}[OK] Services enabled${NC}"
 
 echo
 echo -e "${GREEN}=== Setup Complete ===${NC}"

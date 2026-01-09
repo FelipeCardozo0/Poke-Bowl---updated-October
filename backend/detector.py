@@ -77,11 +77,10 @@ class YOLODetector:
                     if torch.cuda.is_available():
                         self.model.to('cuda')
                         logger.info("Model moved to CUDA device")
-                        
-                        # Enable half precision for Jetson
+                        # Note: Half precision is handled automatically by Ultralytics
+                        # when half=True is passed to predict() method
                         if self.half:
-                            self.model.model.half()
-                            logger.info("FP16 (half precision) enabled")
+                            logger.info("FP16 (half precision) will be used during inference")
                     else:
                         logger.warning("CUDA not available, using CPU")
                         self.device = 'cpu'

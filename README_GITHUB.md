@@ -1,4 +1,4 @@
-# 🍜 Jetson Orin Inventory Vision System
+#  Jetson Orin Inventory Vision System
 
 [![Platform](https://img.shields.io/badge/Platform-Jetson%20Orin%20Nano-76B900?logo=nvidia)](https://developer.nvidia.com/embedded/jetson-orin)
 [![Python](https://img.shields.io/badge/Python-3.10-3776AB?logo=python)](https://www.python.org/)
@@ -8,20 +8,20 @@
 > **Production-ready computer vision inventory system for restaurant environments**  
 > Real-time object detection • Automatic counting • WebSocket streaming • Auto-start on boot
 
-[🚀 Quick Start](#-quick-start) • [📖 Documentation](#-documentation) • [🎯 Features](#-features) • [🏗️ Architecture](#%EF%B8%8F-architecture)
+[ Quick Start](#-quick-start) • [ Documentation](#-documentation) • [ Features](#-features) • [ Architecture](#%EF%B8%8F-architecture)
 
 ---
 
-## 🎯 Features
+##  Features
 
-✅ **Real-time Detection** - YOLO v8+ with GPU acceleration (15-30 FPS)  
-✅ **Stable Counting** - Temporal smoothing eliminates false positives  
-✅ **Live Web Interface** - WebSocket streaming with inventory display  
-✅ **Auto-Start** - Powers on → system ready (no manual intervention)  
-✅ **Self-Healing** - Automatic camera reconnection  
-✅ **Production-Grade** - Comprehensive error handling and logging  
-✅ **40 Product Classes** - Pre-trained model included  
-✅ **One-Command Deploy** - Fully automated setup
+[OK] **Real-time Detection** - YOLO v8+ with GPU acceleration (15-30 FPS)  
+[OK] **Stable Counting** - Temporal smoothing eliminates false positives  
+[OK] **Live Web Interface** - WebSocket streaming with inventory display  
+[OK] **Auto-Start** - Powers on → system ready (no manual intervention)  
+[OK] **Self-Healing** - Automatic camera reconnection  
+[OK] **Production-Grade** - Comprehensive error handling and logging  
+[OK] **40 Product Classes** - Pre-trained model included  
+[OK] **One-Command Deploy** - Fully automated setup
 
 ---
 
@@ -32,7 +32,7 @@ Live camera feed with real-time detection overlays and inventory counts.
 
 ```
 ┌─────────────────────────────────────────────┐
-│ 🍜 Poke Bowl Inventory         Connected ● │
+│  Poke Bowl Inventory         Connected ● │
 ├─────────────────────┬───────────────────────┤
 │                     │  Current Inventory    │
 │   Live Camera       │                       │
@@ -47,7 +47,7 @@ Live camera feed with real-time detection overlays and inventory counts.
 
 ---
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Prerequisites
 - NVIDIA Jetson Orin Nano with JetPack 6.x
@@ -83,24 +83,24 @@ sudo bash setup_autostart.sh
 sudo reboot
 ```
 
-**📖 Full installation guide**: [QUICKSTART.md](QUICKSTART.md)
+** Full installation guide**: [QUICKSTART.md](QUICKSTART.md)
 
 ---
 
-## 📖 Documentation
+##  Documentation
 
 | Document | Description |
 |----------|-------------|
 | **[INDEX.md](INDEX.md)** | 📑 Documentation navigation |
-| **[QUICKSTART.md](QUICKSTART.md)** | ⚡ 10-minute setup guide |
+| **[QUICKSTART.md](QUICKSTART.md)** |  10-minute setup guide |
 | **[README.md](README.md)** | 📘 Complete user manual |
-| **[ARCHITECTURE.md](ARCHITECTURE.md)** | 🏗️ Technical architecture |
-| **[SYSTEM_DIAGRAM.md](SYSTEM_DIAGRAM.md)** | 📊 Visual diagrams |
-| **[DEPLOYMENT_CHECKLIST.md](DEPLOYMENT_CHECKLIST.md)** | ✅ Production deployment |
+| **[ARCHITECTURE.md](ARCHITECTURE.md)** |  Technical architecture |
+| **[SYSTEM_DIAGRAM.md](SYSTEM_DIAGRAM.md)** |  Visual diagrams |
+| **[DEPLOYMENT_CHECKLIST.md](DEPLOYMENT_CHECKLIST.md)** | [OK] Production deployment |
 
 ---
 
-## 🏗️ Architecture
+##  Architecture
 
 ```
 Camera → YOLO Detector → Inventory Tracker → Web Server → Browser(s)
@@ -120,7 +120,7 @@ Camera → YOLO Detector → Inventory Tracker → Web Server → Browser(s)
 
 ---
 
-## 📊 Performance
+##  Performance
 
 | Metric | Typical | Optimized |
 |--------|---------|-----------|
@@ -156,7 +156,7 @@ Jetson-Orin-Inventory-Vision-System/
 
 ---
 
-## 🎓 Usage
+##  Usage
 
 ### Manual Start
 ```bash
@@ -190,7 +190,7 @@ detector:
 
 ---
 
-## 🔧 Troubleshooting
+##  Troubleshooting
 
 ### Camera not detected
 ```bash
@@ -215,7 +215,7 @@ sudo journalctl -u pokebowl-inventory -n 50
 
 ---
 
-## 🎯 Detected Classes (40 total)
+##  Detected Classes (40 total)
 
 Beverages: Black Cherry Cane Sugar, Coke Diet, Coke Zero, Cold Brew Matcha Green Tea, Essentia, Ginger Ale Canada, Guava Green Tea, Iced Tea Cane Sugar, Ito Milk Tea, Jasmine Green Tea, Limonade Cane Sugar, Little Jasmine White Peach Black Tea, Lychee Oolong Tea, Mango Oolong Tea, Oi Ocha Unsweetened Green Tea, Orange Cane Sugar, Passionfruit Green Tea, Perrier, Pineapple Cane Sugar, Pineapple Green Tea, Root Bear Cane Sugar, San Pe Blood Orange, San Pe Lemonade, San Pe Orange, Sprite, Sunkist Orange, Teas' Tea Rose Green Tea, Traditional Golden Oolong Tea, Traditional Jasmine Green Tea, Vanilla Cream Cane Sugar
 
@@ -265,10 +265,10 @@ Repository: [Jetson-Orin-Inventory-Vision-System](https://github.com/FelipeCardo
 
 ---
 
-## 🚀 Status
+##  Status
 
 **Version**: 1.0.0  
-**Status**: ✅ Production Ready  
+**Status**: [OK] Production Ready  
 **Last Updated**: January 2026
 
 **Ready for immediate deployment on Jetson Orin Nano!**
@@ -276,6 +276,6 @@ Repository: [Jetson-Orin-Inventory-Vision-System](https://github.com/FelipeCardo
 ---
 
 <p align="center">
-  Made with ❤️ for restaurant inventory management
+  Made with ❤ for restaurant inventory management
 </p>
 
